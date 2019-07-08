@@ -52,9 +52,10 @@ func NewWithPath(path string) *DefaultLoader {
 	}
 
 	e := &EnvironmentLoader{}
-	f := &FlagLoader{}
+	// f := &FlagLoader{}
 
-	loaders = append(loaders, e, f)
+	// loaders = append(loaders, e, f)
+	loaders = append(loaders, e)
 	loader := MultiLoader(loaders...)
 
 	d := &DefaultLoader{}
